@@ -17,6 +17,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
                 Console.WriteLine("3. Update Member");
                 Console.WriteLine("4. Delete Member");
                 Console.WriteLine("5. Exit");
+                Console.WriteLine("6. Search Member");
 
                 var choice = Console.ReadLine();
 
@@ -52,6 +53,11 @@ namespace MyApp // Note: actual namespace depends on the project name.
                         break;
                     case "5":
                         return;
+                    case "6":
+                        Console.Write("Insert a search: ");
+                        var searchMember = Console.ReadLine();
+                        memberManager.searchMember(searchMember);
+                        break;
                     default:
                         Console.WriteLine("Invalid choice. Please try again.");
                         break;
